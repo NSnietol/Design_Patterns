@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class IterradorCursoCodigo extends Iterador{
 
     private ArrayList<Estudiante> lista;
+    private Estudiante actual;
     private int posicion = 0;
     private String criterio="";
 
@@ -33,8 +34,10 @@ public class IterradorCursoCodigo extends Iterador{
            
             if(this.lista.get(posicion).getCodigo().endsWith(criterio)){
         
-          
-                     return lista.get(posicion);
+           
+                     actual=lista.get(posicion);
+                     posicion++;
+                     return actual;
                     
              
             }
@@ -54,7 +57,7 @@ public class IterradorCursoCodigo extends Iterador{
 
     @Override
     Estudiante elementoActual() {
-          return lista.get(posicion);
+          return actual;
     }
     
 }

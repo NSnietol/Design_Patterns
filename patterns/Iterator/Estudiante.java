@@ -11,13 +11,13 @@ package Iterator;
  */
 public class Estudiante {
     
-    private  String nombre;
+    private String nombre;
     private String codigo;
 
     public Estudiante(String nombre) {
         this.nombre = nombre;
         java.util.Random geneador = new java.util.Random ();
-        this.codigo="0"+geneador.nextInt(15);
+        this.codigo="0"+geneador.nextInt(15)+"";
     }
 
     

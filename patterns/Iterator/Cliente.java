@@ -5,12 +5,6 @@
  */
 package Iterator;
 
-import java.util.Calendar;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *
  * @author ns
@@ -42,27 +36,18 @@ public class Cliente {
         math.agregarItem(n7);
         math.agregarItem(n8);
         math.agregarItem(n9);
-        
-        System.out.println("Listar");
-        math.listar();
-        
-        System.out.println("\nFiltrada");
-        Iterador iterar = math.crearIterador();
-        
-        while (iterar.haTerminado()==false) {
-            try {
-                       System.out.println(iterar.siguiente());
-            } catch (Exception e) {
-                System.out.println("Error");
-                System.err.println(e.fillInStackTrace());
-            }
-     
 
-            
+        System.out.println("Lista de estudiantes");
+        math.listar();
+
+        System.out.println("\nLista filtrada por código filtrada");
+        Iterador iterar = math.crearIterador();
+
+        while (iterar.siguiente() != null) {
+
+            System.out.println(iterar.elementoActual().getNombre() + " " + iterar.elementoActual().getCodigo());
+
         }
-        
-        
-        
 
     }
 

@@ -13,8 +13,8 @@ import java.util.ArrayList;
  */
 public class Curso extends Agregado{
     
-    private String nombre;
-    private ArrayList<Estudiante> lista;
+    private final String nombre;
+    private final ArrayList<Estudiante> lista;
 
     public Curso(String nombre) {
         this.nombre = nombre;
